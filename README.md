@@ -19,7 +19,7 @@ First, we use the Web3 Framework to design the Decentralized Application to crea
 | Solidity is the "smart contract language"  used in developing DApps. It functions as the backend logic on the  blockchain, responsible for implementing the core functionalities of your  DApp, such as purchasing and transferring tokens. |                       |
 | ![](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170939090.png) | **Truffle Module**    |
 | Truffle is a comprehensive blockchain application  development framework that assists in developing, compiling, deploying,  testing, and interacting with smart contracts, making your DApp projects  faster, more structured, and better managed. |                       |
-| ![image-20250406170951308](C:\Users\great\AppData\Roaming\Typora\typora-user-images\image-20250406170951308.png) | **Node.js Module**    |
+| ![image-20250406171701401](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406171701401.png) | **Node.js Module**    |
 | In DApp projects, Node.js serves as the  foundational platform for the entire development environment. It supports  smart contract tools (such as Truffle and Hardhat), frontend Web3 libraries,  testing tools, server logic, automation workflows, and more. |                       |
 
 # Using Command
