@@ -1,12 +1,33 @@
-# Instruction
+# Instruction - Gundam online NFT marketplace
 
-First, we use the Web3 Framework to design the Decentralized Application to create blockchain. Our topic is the Gundam online NFT marketplace.
+ We use the Web3 Framework to design the Decentralized Application to create blockchain. Our topic is the Gundam online NFT marketplace.
  The purpose of designing this project is to provide Gundam enthusiasts with a platform where they can purchase images related to Gundam.
 
+### User
+ In the website, user can visit the website, check all the NFT products(products image, description, price, stock, buyers) available at the marketplace, and check what they buy at their collection. 
+ 
+ The user cab buy the image through MetaMask, also MetaMask was receive some gas for the fee. On the other hand, users can browse the images they have bought on the collection page. User also can resell the image. 
 
- First, in the website user cab buy the image through MetaMask, also MetaMask was receive some gas for the fee. On the other hand, users can browse the images they have bought on the collection page. User also can resell the image. Finally, for the admin page , if you are admin which can modify the ETH of image.
+### Admin
+ The admin can do the same thing as same as the user but also can modify the ETH of image at the admin page after login successful.
 
-# Using Techniques
+
+
+## Table of contents
+
+- [Using Techniques](#UsingTechniques)
+
+- [Tools Requirements & Download](#ToolsRequirements&Download)
+
+- [Using Command](#UsingCommand)
+
+- [How to Open](#HowtoOpen)
+
+- [Bug Fixing ](#BugFixing)
+
+
+
+## Using Techniques
 
 | ![image-20250406170910603](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170910603.png) | **Web3 Technology**   |
 | ------------------------------------------------------------ | --------------------- |
@@ -22,7 +43,19 @@ First, we use the Web3 Framework to design the Decentralized Application to crea
 | ![image-20250406171701401](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406171701401.png) | **Node.js Module**    |
 | In DApp projects, Node.js serves as the  foundational platform for the entire development environment. It supports  smart contract tools (such as Truffle and Hardhat), frontend Web3 libraries,  testing tools, server logic, automation workflows, and more. |                       |
 
-# Using Command
+
+
+## Tools Requirements & Download
+
+- [Node.js](https://nodejs.org/en)
+- [ganache](https://archive.trufflesuite.com/ganache/)
+- Truffle
+- Code Editor:
+    * [VS Code](https://code.visualstudio.com/download)
+
+
+
+## Using Command
 
 Execution Type:
 
@@ -40,39 +73,11 @@ Installation Type:
 | ------------------------------- | ---------------------- |
 |                                 |                        |
 
-# Solving Problem
 
-In admin.html, I will attempt to modify ETH, but we must ensure that the website's account owner matches the current account. Therefore, in the browser, press Ctrl+Shift+I to open the Developer Tools console, and then input the following commands into the console.
 
-```
-App.contracts.ImageStore.deployed().then(i => i.owner()).then(o  => console.log("Contract owner：", o));  
-```
+## How to Open
 
-and
-
-```  
-web3.eth.getAccounts(function (err, accounts) {   console.log("current  account：", accounts[0]);  });  
-```
-
-To verify if the two match. If they do, we can be confident that we can modify the ETH in the admin at the current blockchain address. Otherwise, we must change the current account to the same account as the owner contract account.
-
-![image-20250406170121754](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170121754.png)
-
-Regarding html 
- html part。[3 files]
-
-## index.html![image-20250406170141197](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170141197.png)
-
-## admin.html
-
-![image-20250406170153832](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170153832.png)
-
-## collection.html
-
-![image-20250406170203596](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170203596.png)
-
-# How to open
-
+**There are a few of simple steps for open the websit at local:**
 
 **Step 1:**
 
@@ -80,13 +85,19 @@ First, install Node.js on your Windows machine by visiting https://nodejs.org/en
 
 **Step 2:**
 
- Return to VSCode, open  PowerShell, and run npm commands:     
+ Open VSCode, open PowerShell, and run npm commands:     
 
 Enter the following command to allow npm to execute: 
+```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned   
+```
 
-Install Truffle by running:        
+Install Truffle by running:  
+```      
 npm install -g truffle    
+```
+
+- If you haven't used VS Code before, be sure to check out the Getting Started guide online.
 
 **Step 3:**
 
@@ -145,8 +156,7 @@ Next, you'll use Ganache's private key.
 **Step 13:**
 
 And just like that, you've obtained simulated virtual currency.
-![image-20250406170626394](C:\Users\great\AppData\Roaming\Typora\typora-user-images\image-20250406170626394.png)
-
+![image-20250331232635248](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250331232635248.png)
 
 **Step 14:**
 
@@ -160,3 +170,38 @@ npm run dev
 ![image-20250406170651686](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170651686.png)
 
 After running these commands, you'll be able to open the webpage and start buying and selling images.
+
+
+
+## Bug Fixing 
+
+In admin.html, I will attempt to modify ETH, but we must ensure that the website's account owner matches the current account. Therefore, in the browser, press Ctrl+Shift+I to open the Developer Tools console, and then input the following commands into the console.
+
+```
+App.contracts.ImageStore.deployed().then(i => i.owner()).then(o  => console.log("Contract owner：", o));  
+```
+
+and
+
+```  
+web3.eth.getAccounts(function (err, accounts) {   console.log("current  account：", accounts[0]);  });  
+```
+
+To verify if the two match. If they do, we can be confident that we can modify the ETH in the admin at the current blockchain address. Otherwise, we must change the current account to the same account as the owner contract account.
+
+![image-20250406170121754](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170121754.png)
+
+Regarding html 
+ html part。[3 files]
+
+### index.html![image-20250406170141197](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170141197.png)
+
+### admin.html
+
+![image-20250406170153832](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170153832.png)
+
+### collection.html
+
+![image-20250406170203596](http://pdm888.oss-cn-beijing.aliyuncs.com/img/image-20250406170203596.png)
+
+
